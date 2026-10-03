@@ -13,7 +13,7 @@
 
 Bash-based **passive reconnaissance + attack surface mapping** script using only **public APIs + stock Linux tools** (`curl`, `dig`, `openssl`, `nmap`, `python3`).
 
-All output goes to a **single `.txt` file**: `recon_<domain>.txt`.
+All output goes to a **single `.txt` file**: `nuke_<domain>.txt`.
 
 No dependency on `subfinder`, `ffuf`, `gobuster`, `subjs`, `getJS`, `jshunter`, or `js_snitch`.
 
@@ -61,26 +61,26 @@ Works on Kali, Ubuntu, Debian, WSL2.
 ## 🚀 Installation
 
 ```bash
-git clone https://github.com/YOUR-USER/nuke-recon.git
-cd nuke-recon
-chmod +x recon.sh
+git clone https://github.com/AnkhCorp/Nuke.sh.git
+cd Nuke.sh
+chmod +x nuke.sh
 ```
 
 ## ▶️ Usage
 
 ```bash
 # Basic (100% free, no keys)
-bash recon.sh example.com
+bash nuke.sh example.com
 
 # With keys (via arguments)
-bash recon.sh example.com SECURITYTRAILS_KEY VIRUSTOTAL_KEY
+bash nuke.sh example.com SECURITYTRAILS_KEY VIRUSTOTAL_KEY
 
 # With keys via env (recommended — never commit keys)
 export SECURITYTRAILS_API_KEY="your_key"
 export VT_APIKEY="your_key"
 export SHODAN_API_KEY="your_key"    # optional
 export ZOOMEYE_KEY="your_key"       # optional
-bash recon.sh example.com
+bash nuke.sh example.com
 ```
 
 Supported environment variables:
@@ -96,7 +96,7 @@ Supported environment variables:
 Output:
 
 ```
-recon_example.com.txt
+nuke_example.com.txt
 ```
 
 ## 📄 Sample output
